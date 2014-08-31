@@ -1,4 +1,6 @@
 
+#include<stdlib.h>
+
 /**
  * One is supposed to call this hash function in a loop where
  * each time a new character from the source is fed into the 
@@ -7,6 +9,6 @@
  * from different origins to comput hashes
  */
 
-long sdbm(char c, long prev_hash_val){
-	return (prev_hash_val<<6) + (prev_hash_val<<16)-prev_hash_val + c;
+unsigned long sdbm(char c, long prev_hash_val){
+	return abs((prev_hash_val<<6) + (prev_hash_val<<16)-prev_hash_val + c);
 }
