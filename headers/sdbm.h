@@ -2,4 +2,4 @@
 #define _SDBM_H_
 #endif
 
-long sdbm(unsigned char *str, int length);
+long sdbm(char *str, long prev_hash_val);
